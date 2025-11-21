@@ -95,3 +95,28 @@ button:hover {
     font-size: 18px;
 }
 </style>
+
+<script>
+   function mostrarTabuada(){
+  const numeroInput = document.getElementById('numeroInput');
+  const valorX = parseInt(numeroInput.value);
+
+  if (isNaN(valorX)) {
+    alert("Por favor, digite um número inteiro válido");
+    return;
+  }
+
+  const divResultado = document.getElementById('resultado');
+  divResultado.innerHTML = '';
+
+  for (let i = 1; i <= 10; i++) {
+    const resultado = valorX * i;
+
+    const paragrafo = document.createElement('p');
+    paragrafo.textContent = `${valorX} * ${i} = ${resultado}`;
+   divResultado.appendChild(paragrafo)
+  }
+  
+}
+</script>
+</script>
